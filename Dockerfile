@@ -5,14 +5,11 @@ ENV MIX_ENV prod
 RUN mkdir /dashboard
 WORKDIR /dashboard
 
-ADD ./mix.exs ./
-ADD ./mix.lock ./
-RUN mix deps.get
-
-ADD ./package.json ./
-RUN npm install --silent
-
 ADD . /dashboard
+
+
+RUN mix deps.get && npm install --silent
+
 RUN npm run build
 RUN mix compile
 
