@@ -1,0 +1,2 @@
+defmodule KittoDashboard do
+end
