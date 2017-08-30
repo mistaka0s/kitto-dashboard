@@ -1,6 +1,8 @@
 FROM zorbash/kitto
 
 ENV MIX_ENV prod
+ENV KITTO_IP 0.0.0.0
+ENV KITTO_PORT 4000
 
 RUN mkdir /dashboard
 WORKDIR /dashboard

@@ -5,7 +5,11 @@
 # is restricted to this project.
 use Mix.Config
 
-config :kitto, root: Path.dirname(__DIR__), port: 4000, otp_app: :kitto_dashboard
+config :kitto,
+  ip: {:system, "KITTO_IP"},
+  otp_app: :kitto_dashboard,
+  port: {:system, "KITTO_PORT"},
+  root: Path.dirname(__DIR__)
 
 # Use reload_code?: false to disable code reloading in development environment
 # Read More: https://github.com/kittoframework/kitto/wiki/Code-Reloading
