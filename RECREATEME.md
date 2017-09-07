@@ -9,7 +9,7 @@ The instructions below allows you to generate a new dashboard in the current dir
     local$ docker run --rm -it -v `pwd`:/dashboard zorbash/kitto bash
     ```
 
-1. Get the latest code from [Kitto](https://github.com/kittoframework/kitto/tags). (`0.6.0` at the time of writing.)
+1. Get the latest code from [Kittoframework/archives](https://github.com/kittoframework/archives). (`0.6.0` at the time of writing.)
 
     ```
     docker# mix archive.install https://github.com/kittoframework/archives/raw/master/kitto_new-0.6.0.ez
