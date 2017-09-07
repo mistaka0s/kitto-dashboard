@@ -42,5 +42,11 @@ config :logger, :console,
 #
 # config :kitto, :auth_token: "asecret"
 
+# Add Grafana library details.
+config :grafana,
+  api_host: {:system, "GRAFANA_URL"},
+  username: {:system, "GRAFANA_USERNAME"},
+  password: {:system, "GRAFANA_PASSWORD"}
+
 # Load environment specific configuration
 import_config "#{Mix.env}.exs"

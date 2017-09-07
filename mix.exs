@@ -14,13 +14,21 @@ defmodule KittoDashboard.Mixfile do
   #
   # Type `mix help compile.app` for more information.
   def application do
-    [applications: [:logger, :kitto]]
+    [applications:
+      [:logger,
+       :grafana,
+       :kitto
+      ]
+    ]
   end
 
   # Specifies your project dependencies.
   #
   # Type `mix help deps` for examples and options.
   defp deps do
-    [{:kitto, "~> 0.6.0"}]
+    [{:kitto, "~> 0.6.0"},
+     {:grafana, "~> 0.1.0" },
+     {:poison, "~> 3.0", override: true}
+    ]
   end
 end
